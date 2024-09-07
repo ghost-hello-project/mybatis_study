@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.laolang.jx.module.system.mapper.SysDictDataMapper">
+
+    <resultMap id="SysDictDataBaseMap" type="com.laolang.jx.module.system.entity.SysDictData">
+        <id property="id" column="id" javaType="java.lang.Long" jdbcType="BIGINT"/>
+        <result property="createBy" column="create_by" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="createTime" column="create_time" javaType="java.time.LocalDateTime" jdbcType="TIMESTAMP"/>
+        <result property="updateBy" column="update_by" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="updateTime" column="update_time" javaType="java.time.LocalDateTime" jdbcType="TIMESTAMP"/>
+        <result property="remark" column="remark" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="type" column="type" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="groupCode" column="group_code" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="label" column="label" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="defaultValue" column="default_value" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="status" column="status" javaType="java.lang.String" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <select id="selectList" resultMap="SysDictDataBaseMap">
+        select * from sys_dict_data
+    </select>
+</mapper>
